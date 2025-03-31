@@ -24,7 +24,7 @@ fn main()-> anyhow::Result<()>{
     {
         let path = entry.path();
         println!("Processing: {:?}", path);
-        // process_asc_file(path, &args)?;
+        process_asc_file(path, &args)?;
     }
 
     Ok(())
