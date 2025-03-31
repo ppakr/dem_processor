@@ -5,7 +5,7 @@ use clap::Parser;
 use walkdir::WalkDir;
 use std::fs;
 use crate::cli::Args;
-// use crate::processor::process_asc_file;
+use crate::processor::process_asc_file;
 
 fn main()-> anyhow::Result<()>{
 
