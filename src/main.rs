@@ -9,7 +9,7 @@ use crate::processor::process_asc_file;
 
 fn main()-> anyhow::Result<()>{
 
-    println!("Starting DEM Processor...");
+    println!("🍕 Starting DEM Processor...");
     
     let args = Args::parse();
 
@@ -26,6 +26,8 @@ fn main()-> anyhow::Result<()>{
         println!("Processing: {:?}", path);
         process_asc_file(path, &args)?;
     }
+
+    println!("All done! Good job! You deserved a beer! 🍺"); // I'm telling myself
 
     Ok(())
 }

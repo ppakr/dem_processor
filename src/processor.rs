@@ -17,7 +17,7 @@ pub fn process_asc_file(path: &Path, args: &Args) -> Result<()> {
             // Save the grayscale image to the output directory.
             let output_path = args.output_dir.join(format!("{}.png", path.file_stem().unwrap().to_string_lossy()));
             image.save(&output_path)?;
-            println!("Saved grayscale image to {:?}", output_path);
+            println!("🍤 Saved grayscale image to {:?}", output_path);
         }
         "hillshade" => {
             // Generate a colormap from the grayscale image.
@@ -29,9 +29,9 @@ pub fn process_asc_file(path: &Path, args: &Args) -> Result<()> {
             // Save the hillshaded image to the output directory.
             let output_path = args.output_dir.join(format!("{}_hillshade.png", path.file_stem().unwrap().to_string_lossy()));
             blended.save(&output_path)?;
-            println!("Saved hillshaded image to {:?}", output_path);
+            println!("🧋 Saved hillshaded image to {:?}", output_path);
         }
-        _ => println!("Unsupported mode: {}", args.mode),
+        _ => println!("💔 Unsupported mode: {}", args.mode),
     }
 
     Ok(())
